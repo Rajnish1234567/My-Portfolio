@@ -29,6 +29,7 @@ nav{
     width:80%;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: -10px;
 }
 .nav1{
     position: fixed;
@@ -387,6 +388,7 @@ nav .fas{
     .nav1{
         width:80%;
         margin: auto;
+        margin-top: -10px;
     }
     nav .fas{
         display: block;
