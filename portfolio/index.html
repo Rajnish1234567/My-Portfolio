@@ -21,7 +21,7 @@
                     <li><a href="#about">About</a></li>
                     <!-- <li><a href="#services">Skills</a></li> -->
                     <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#calender">Calender</a></li>
+                    <!-- <li><a href="#calender">Calender</a></li> -->
                     <li><a href="#contact">Contact</a></li>
     
                     <i class="fas fa-times" onclick="closemenu()"></i>
@@ -246,15 +246,14 @@
 
 
     <!-- calendar---------------------------- -->
-    <div id="calender">
+    <!-- <div id="calender">
         <div class="container">
             <h1 class="sub-title">Github Calender</h1>
             <div class="calendar">
-                <!-- Loading stuff -->
                 Loading the data just for you.
             </div>
         </div>
-    </div>
+    </div> -->
     
     
 <!-- -----------contact------------ -->
@@ -283,7 +282,7 @@
             </div>
         </div>
     </div>
-    <div class="copyright">Designed and Deployed by Rajnish with <i class="fa-regular fa-heart"></i></div>
+    <div class="copyright">Designed and Deployed by Rajnish </div>
 </div>
 
 
@@ -319,20 +318,22 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwASc6VuQmOVRKrHw9lpzEsGsHYNlQnHmUbBpW6Tv4nhxeGKzaCEmoA2z7jYCHwsj903w/exec'
         const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg")
+        const msg = document.getElementById("msg");
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response =>{
-                msg.innerHTML="Message sent successfully!"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
+            e.preventDefault();
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
             })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
 </body>
 </html>
 <script
