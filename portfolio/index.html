@@ -26,6 +26,7 @@
     
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
@@ -378,4 +379,26 @@
     GitHubCalendar(".calendar", "rajnish1234567", { responsive: true });
 
     
+</script>
+
+<script>
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+if(localStorage.getItem("theme") === "light"){
+    body.classList.add("light-theme");
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+}
+
+themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+
+    if(body.classList.contains("light-theme")){
+        localStorage.setItem("theme", "light");
+        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+        localStorage.setItem("theme", "dark");
+        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+});
 </script>
