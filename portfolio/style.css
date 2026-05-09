@@ -224,46 +224,75 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
-    border-radius: 10px;
+.work {
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
-.work img{
+.work h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.4;
+}
+.work img {
     width: 100%;
-    border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
 }
-.layer{
-    width:100%;
-    height: 100%;
-    /* background: #ee0b53; */
-    border-radius: 10px;
-    /* position: absolute; */
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), #00c6ff);
+    border-radius: 15px;
+    position: absolute;
     left: 0;
     bottom: 0;
-    overflow: hidden;
-    /* display: flex; */
-    /* align-items: center; */
-    align-content: center;
+    overflow: scroll;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
-    padding: 0 20px;
-    /* text-align: center; */
+    flex-direction: column;
+
+    padding: 0 25px;
+    text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    transition: height 0.5s ease;
 }
-.layer h3{
-    margin-top: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
+
+.layer h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.4;
 }
-.layer h4{
-    margin-top: 10px;
+
+.layer h4 {
+    margin-top: 15px;
+    font-size: 16px;
 }
-.layer p{
+
+.layer p {
     font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.work:hover img {
+    transform: scale(1.08);
+}
+
+.work:hover .layer {
+    height: 100%;
 }
 .layer #link{
     width: 100%;

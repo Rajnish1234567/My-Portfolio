@@ -26,11 +26,6 @@ It highlights:
 
 ## Tech Stack
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
-
 ### Backend Expertise Highlighted
 - Java
 - Spring Boot
@@ -40,6 +35,11 @@ It highlights:
 - Redis
 - REST APIs
 - Microservices
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
 ---
 
