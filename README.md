@@ -4,9 +4,8 @@ A modern personal portfolio website showcasing my experience, technical expertis
 
 ## Live Demo
 
-[View Portfolio](#)
+[View Portfolio](https://rajnish-portfolio.netlify.app/)
 
-> Replace `#` with your deployed portfolio link
 
 ---
 
