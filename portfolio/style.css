@@ -25,7 +25,7 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
     transition: 0.4s ease;
-}
+} 
 /* #header{
     width: 100%;
     height: 100vh;
@@ -45,8 +45,8 @@ body{
         ),
         url('./images/background.png');
 
-    background-size: cover;
-    background-position: center;
+    background-size: 80% auto;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 body.light-theme #header {
@@ -57,8 +57,9 @@ body.light-theme #header {
         ),
         url('./images/background.png');
 
-    background-size: cover;
-    background-position: center;
+    background-size: 80% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .container{
     padding: 10px 10%;
@@ -228,10 +229,12 @@ nav ul li a:hover::after{
 }
 .services-list div p{
     width:100%;
-    font-size: 35px;
+    font-size: 27px;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
+
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
@@ -259,12 +262,19 @@ nav ul li a:hover::after{
 #portfolio{
     padding: 50px 0;
 }
-.work-list{
+/* .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+} */
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
 }
+
 .work {
     border-radius: 15px;
     position: relative;
@@ -455,6 +465,11 @@ form .btn2{
 }
 .copyright *{
     color:var(--accent-color);
+}
+@media only screen and (max-width: 768px) {
+    .work-list {
+        grid-template-columns: 1fr;
+    }
 }
 /* --------------css for small screen----------- */
 nav .fas{
