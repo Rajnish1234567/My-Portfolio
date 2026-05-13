@@ -23,7 +23,7 @@
                     <li><a href="#portfolio">Projects</a></li>
                     <!-- <li><a href="#calender">Calender</a></li> -->
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="./images/Rajnish_Kumar_Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="#" onclick="openAndDownloadResume()"> Resume</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
@@ -33,9 +33,7 @@
                 <p>Hey, I'm</p>
                 <h1>Rajnish <span>Kumar</span></h1>
                 <h3>Java Backend Developer</h3>
-                <a href="./images/Rajnish_Kumar_Resume.pdf" target="_blank" class="btn btn2">
-                    View Resume
-                </a>
+                <a href="#" class="btn btn2" onclick="openAndDownloadResume()">View Resume</a>
             </div>
         </div>
     </div>
@@ -422,4 +420,18 @@ themeToggle.addEventListener("click", () => {
         themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 });
+</script>
+<script>
+    function openAndDownloadResume() {
+    const file = './images/Rajnish_Kumar_Resume.pdf';
+
+    window.open(file, '_blank');
+
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = 'Rajnish_Kumar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 </script>
